@@ -6,16 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var Word = (function () {
+    function Word() {
+    }
+    return Word;
+}());
+exports.Word = Word;
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular';
+        this.word = {
+            word: "typescript",
+            id: 1,
+            definition: "ES Superset typed language"
+        };
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}}</h1>",
+        template: "\n    <h1>{{word.word}}</h1>\n    <p>Definition: {{word.definition}} </p>\n  ",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
